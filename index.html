@@ -1,0 +1,518 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jakarta Exclusive Event - Event Organizer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">
+        <img src="Gambar lokasi/Logo/JEE LOGO OUTLINE HITAM.jpeg" alt="Jakarta Exclusive Event" class="logo-img">
+      </a>
+      <div class="nav-toggle" id="navToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#beranda" class="nav-link">Beranda</a></li>
+      <li><a href="#ongoing" class="nav-link">Event Aktif</a></li>
+      <li><a href="#portofolio" class="nav-link">Portofolio</a></li>
+      <li><a href="#partners" class="nav-link">Mitra</a></li>
+      <li><a href="#simulasi" class="nav-link">Simulasi Budget</a></li>
+      <li><a href="#kontak" class="nav-link">Kontak</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#pesan" class="nav-cta">Pesan Event</a>
+      <button class="dark-toggle" id="darkToggle" title="Dark Mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+    </div>
+  </nav>
+
+  <!-- ========== ONGOING EVENTS BANNER ========== -->
+  <div class="ongoing-banner" id="ongoingBanner">
+    <div class="container ongoing-container">
+      <i class="fas fa-broadcast-tower"></i>
+      <span id="ongoingText">Memuat info event berlangsung...</span>
+    </div>
+  </div>
+
+  <!-- ========== HERO / BERANDA ========== -->
+  <section class="hero" id="beranda">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-slider" id="heroSlider">
+      <div class="slider-track" id="sliderTrack">
+        <div class="slider-slide"><img src="Gambar lokasi/Gathering/Gathering 1.jpeg" alt="Gathering"></div>
+        <div class="slider-slide"><img src="Gambar lokasi/Gathering/Gathering 2.jpeg" alt="Gathering"></div>
+        <div class="slider-slide"><img src="Gambar lokasi/Gathering/Gathering 3.jpeg" alt="Gathering"></div>
+      </div>
+      <button class="slider-arrow slider-prev" id="sliderPrev"><i class="fas fa-chevron-left"></i></button>
+      <button class="slider-arrow slider-next" id="sliderNext"><i class="fas fa-chevron-right"></i></button>
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-content container">
+      <h1>Jakarta Exclusive Event</h1>
+      <p>Event Organizer profesional untuk Gathering dan Outbound.</p>
+      <div class="hero-buttons">
+        <a href="#portofolio" class="btn btn-primary">Lihat Portofolio</a>
+        <a href="#pesan" class="btn btn-secondary">Pesan Event</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TENTANG KAMI ========== -->
+  <section class="about section-pad">
+    <div class="container">
+      <h2 class="section-title">Tentang Kami</h2>
+      <p class="section-desc">
+        Jakarta Exclusive Event adalah penyedia jasa Event Organizer terpercaya di Jakarta. 
+        Kami menangani <strong>Gathering dan Outbound</strong> 
+        secara profesional. Dengan pengalaman bertahun-tahun, 
+        kami siap mewujudkan acara impian Anda.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== PORTOFOLIO ========== -->
+  <section class="portfolio section-pad" id="portofolio">
+    <div class="container">
+      <h2 class="section-title">Portofolio</h2>
+      <p class="section-desc">Pilih kategori event untuk melihat portofolio kami.</p>
+
+      <div class="portfolio-grid">
+        <!-- Card 1: Gathering -->
+        <div class="portfolio-card" data-category="gathering">
+          <div class="portfolio-card-img">
+            <img src="Gambar lokasi/Gathering/Gathering utama.jpeg" alt="Gathering">
+            <div class="portfolio-card-overlay">
+              <span>Lihat Detail</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <h3>Gathering</h3>
+            <p>Family Gathering, Corporate Gathering, dan Community Gathering</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Team Building -->
+        <div class="portfolio-card" data-category="team-building">
+          <div class="portfolio-card-img">
+            <img src="Gambar lokasi/Team Building/Team Building Utama.jpeg" alt="Team Building">
+            <div class="portfolio-card-overlay">
+              <span>Lihat Detail</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <h3>Outbound</h3>
+            <p>Team Building, Fun Games, Inflatable Games, dan banyak lagi!</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PORTFOLIO MODAL ========== -->
+  <div class="modal-overlay" id="portfolioModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      <div class="modal-body" id="modalBody">
+        <!-- Dynamically filled -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== MITRA VENUE ========== -->
+  <section class="partners-section section-pad" id="partners">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Mitra Kami</p>
+        <h2 class="section-title">Lokasi & Venue <em>Rekanan</em></h2>
+        <p class="section-desc">Jaringan mitra venue terbaik kami untuk menghadirkan event yang sempurna.</p>
+      </div>
+      <div class="partners-grid" id="partnersGrid"></div>
+    </div>
+  </section>
+
+  <!-- ========== PESAN EVENT ========== -->
+  <section class="booking section-pad" id="pesan">
+    <div class="container">
+      <h2 class="section-title">Pesan Event</h2>
+      <p class="section-desc">Isi formulir di bawah, tim kami akan mengkonfirmasi ketersediaan dan menghubungi Anda.</p>
+
+      <div class="booking-wrapper">
+        <form class="booking-form" id="bookingForm" onsubmit="return false;">
+
+          <!-- Step 1: Kategori -->
+          <div class="booking-step" id="step1">
+            <h3 class="step-title"><span class="step-num">1</span> Pilih Kategori Event</h3>
+            <p class="step-hint">Bisa pilih lebih dari satu kategori</p>
+
+            <div class="cat-accordion">
+              <div class="cat-group">
+                <div class="cat-group-header" onclick="toggleCatGroup(this)">
+                  <span>Gathering</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="cat-group-body">
+                  <label class="cat-check">
+                    <input type="radio" name="gathering-category" value="gathering-family">
+                    <span class="cat-check-label">Family Gathering</span>
+                  </label>
+                  <label class="cat-check">
+                    <input type="radio" name="gathering-category" value="gathering-corporate">
+                    <span class="cat-check-label">Corporate Gathering</span>
+                  </label>
+                  <label class="cat-check">
+                    <input type="radio" name="gathering-category" value="gathering-community">
+                    <span class="cat-check-label">Community Gathering</span>
+                  </label>
+                </div>
+              </div>
+              <div class="cat-group">
+                <div class="cat-group-header" onclick="toggleCatGroup(this)">
+                  <span>Outbound</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="cat-group-body">
+                  <label class="cat-check">
+                    <input type="checkbox" name="category" value="tb-team-building">
+                    <span class="cat-check-label">Team Building</span>
+                  </label>
+                  <label class="cat-check">
+                    <input type="checkbox" name="category" value="tb-fun-games">
+                    <span class="cat-check-label">Fun Games</span>
+                  </label>
+                  <label class="cat-check">
+                    <input type="checkbox" name="category" value="tb-inflatable">
+                    <span class="cat-check-label">Inflatable Games</span>
+                  </label>
+                </div>
+              </div>
+
+
+
+            </div>
+
+            <div class="booking-nav">
+              <a href="#simulasi" class="btn btn-secondary btn-budget">Simulasi Budget</a>
+              <button type="button" class="btn btn-primary step-next" onclick="nextStep(1)">Selanjutnya →</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Detail Event -->
+          <div class="booking-step" id="step2" style="display:none;">
+            <h3 class="step-title"><span class="step-num">2</span> Detail Event</h3>
+
+            <div class="booking-detail-grid">
+              <div class="form-group">
+                <label>Nama Acara / Event</label>
+                <input type="text" id="eventName" placeholder="Mis: Annual Gathering PT. Maju Jaya 2025" required>
+              </div>
+              <div class="form-group">
+                <label>Nama Pemesan / PIC</label>
+                <input type="text" id="picName" placeholder="Nama lengkap" required>
+              </div>
+              <div class="form-group">
+                <label>No. WhatsApp</label>
+                <input type="tel" id="waNumber" placeholder="08xxxxxxxxxx" required>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="email@domain.com">
+              </div>
+              <div class="form-group">
+                <label>Mulai Event (tanggal)</label>
+                <input type="date" id="eventStartDate" required onchange="calcDuration()">
+              </div>
+              <div class="form-group">
+                <label>Mulai Event (jam)</label>
+                <input type="time" id="eventStartTime" required onchange="calcDuration()">
+              </div>
+              <div class="form-group">
+                <label>Selesai Event (tanggal)</label>
+                <input type="date" id="eventEndDate" required onchange="calcDuration()">
+              </div>
+              <div class="form-group">
+                <label>Selesai Event (jam)</label>
+                <input type="time" id="eventEndTime" required onchange="calcDuration()">
+              </div>
+              <div class="form-group">
+                <label>Durasi</label>
+                <input type="text" id="durationDisplay" readonly style="background:var(--bg3);font-weight:600;" placeholder="Otomatis terhitung">
+              </div>
+              <div class="form-group">
+                <label>Jumlah Peserta</label>
+                <input type="number" id="participants" min="50" max="300" placeholder="Jumlah orang (50-300)" required onblur="if(this.value<50)this.value=50;if(this.value>300)this.value=300">
+              </div>
+            </div>
+
+            <!-- Lokasi -->
+            <div class="form-group full-width">
+              <label>Lokasi Event</label>
+              <div id="partnerLoc">
+                <select id="venueSelect" onchange="updateVenueImage()">
+                  <option value="">-- Pilih venue --</option>
+                  <option value="Sisi Cai">Sisi Cai</option>
+                  <option value="Danau Cisadon Sentul">Danau Cisadon Sentul</option>
+                  <option value="Curug Bidadari">Curug Bidadari</option>
+                </select>
+              </div>
+              <div id="venueImageWrap" style="margin-top:0.75rem;display:none;">
+                <img id="venueImage" src="" alt="Foto venue" style="width:100%;max-height:220px;object-fit:cover;border-radius:var(--radius-sm);box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label>Catatan / Permintaan Khusus</label>
+              <textarea id="notes" rows="3" placeholder="Tema, dekorasi, kebutuhan teknis, dll."></textarea>
+            </div>
+
+            <div id="conflictWarning" class="conflict-warning" style="display:none;">
+              ⚠️ <strong>Perhatian Admin:</strong> Terdapat event lain yang jadwalnya berdekatan pada tanggal ini. Tim akan menghubungi Anda untuk konfirmasi ketersediaan.
+            </div>
+
+            <div class="form-group full-width">
+              <label>Kode Diskon</label>
+              <div style="display:flex;gap:0.5rem;">
+                <input type="text" id="bookingRedeemCode" placeholder="Masukkan kode diskon" style="flex:1;padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--bg2);color:var(--text);">
+                <button type="button" class="btn btn-primary" onclick="buildSummary()" style="padding:8px 16px;font-size:0.8rem;">Terapkan</button>
+              </div>
+            </div>
+
+            <div class="booking-nav">
+              <a href="#simulasi" class="btn btn-secondary btn-budget">Simulasi Budget</a>
+              <button type="button" class="btn btn-secondary" onclick="prevStep(2)">← Kembali</button>
+              <button type="button" class="btn btn-primary step-next" onclick="nextStep(2)">Selanjutnya →</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Konfirmasi -->
+          <div class="booking-step" id="step3" style="display:none;">
+            <h3 class="step-title"><span class="step-num">3</span> Konfirmasi Pesanan</h3>
+            <div class="order-summary" id="orderSummary"></div>
+            <p class="confirm-note">📌 Pesanan Anda akan <strong>pending</strong> hingga dikonfirmasi admin. Lanjutkan ke WhatsApp untuk konfirmasi langsung.</p>
+            <div class="booking-nav">
+              <button type="button" class="btn btn-secondary" onclick="prevStep(3)">← Kembali</button>
+              <button type="button" class="btn btn-success" id="waConfirm" onclick="sendToWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Konfirmasi via WhatsApp
+              </button>
+            </div>
+          </div>
+
+          <!-- Progress Steps Indicator -->
+          <div class="form-progress">
+            <div class="progress-step active" id="prog1">
+              <div class="prog-dot">1</div><span>Kategori</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step" id="prog2">
+              <div class="prog-dot">2</div><span>Detail</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step" id="prog3">
+              <div class="prog-dot">3</div><span>Konfirmasi</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SIMULASI BUDGET ========== -->
+  <section class="budget section-pad" id="simulasi">
+    <div class="container">
+      <h2 class="section-title">Simulasi Budget</h2>
+      <p class="section-desc">Hitung estimasi biaya event Anda secara cepat. Angka ini adalah estimasi awal — detail final akan dikonfirmasi tim kami.</p>
+
+      <div class="budget-wrapper">
+        <div class="budget-form">
+          <div class="budget-group">
+            <label>Jenis Event</label>
+            <div class="budget-cat-accordion">
+              <div class="budget-cat-group">
+                <div class="budget-cat-header">Gathering</div>
+                <div class="budget-cat-body">
+                  <label class="budget-cat-check"><input type="radio" name="budget-gathering" value="family-gathering" checked onchange="calcBudget()"> <span>Family Gathering</span></label>
+                  <label class="budget-cat-check"><input type="radio" name="budget-gathering" value="corporate-gathering" onchange="calcBudget()"> <span>Corporate Gathering</span></label>
+                  <label class="budget-cat-check"><input type="radio" name="budget-gathering" value="community-gathering" onchange="calcBudget()"> <span>Community Gathering</span></label>
+                </div>
+              </div>
+              <div class="budget-cat-group">
+                <div class="budget-cat-header">Outbound</div>
+                <div class="budget-cat-body">
+                  <label class="budget-cat-check"><input type="checkbox" name="budget-outbound" value="team-building" onchange="calcBudget()"> <span>Team Building</span></label>
+                  <label class="budget-cat-check"><input type="checkbox" name="budget-outbound" value="fun-games" onchange="calcBudget()"> <span>Fun Games</span></label>
+                  <label class="budget-cat-check"><input type="checkbox" name="budget-outbound" value="inflatable-games" onchange="calcBudget()"> <span>Inflatable Games</span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="budget-group">
+            <label>Lokasi Venue</label>
+            <select id="budgetVenue" onchange="calcBudget()">
+              <option value="">-- Pilih venue --</option>
+              <option value="sisi-cai">Sisi Cai (Rp50.000/orang)</option>
+              <option value="curug-bidadari">Curug Bidadari (Rp20.000/orang)</option>
+              <option value="danau-cisadon">Danau Cisadon Sentul (Rp30.000/orang)</option>
+            </select>
+          </div>
+
+          <div class="budget-group">
+            <label>Durasi: <strong id="daysLabel">1</strong> hari</label>
+            <input type="number" id="budgetDays" min="1" max="7" value="1" onchange="calcBudget()" style="width:100%;padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--bg2);color:var(--text);">
+          </div>
+
+          <div class="budget-group">
+            <label>Jumlah Peserta: <strong id="partLabel">100</strong> orang</label>
+            <input type="number" id="budgetPartInput" min="50" max="300" value="100" onchange="syncBudgetPartFromInput()" placeholder="50-300" style="width:100%;margin-bottom:6px;padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--bg2);color:var(--text);">
+            <input type="range" id="budgetPart" min="50" max="300" step="1" value="100" oninput="syncBudgetPartFromSlider()">
+            <div class="range-ends"><span>50</span><span>300</span></div>
+          </div>
+
+          <div class="budget-group">
+            <label>Kode Diskon</label>
+            <div style="display:flex;gap:0.5rem;">
+              <input type="text" id="redeemCode" placeholder="Masukkan kode" style="flex:1;padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--bg2);color:var(--text);">
+              <button type="button" class="btn btn-primary" onclick="calcBudget()" style="padding:8px 16px;font-size:0.8rem;">Terapkan</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="budget-result" id="budgetResult">
+          <div class="result-label">Estimasi Biaya</div>
+          <div class="result-amount" id="resultAmount">Rp 0</div>
+          <div class="result-breakdown" id="resultBreakdown"></div>
+          <p class="result-note">* Estimasi ini bersifat indikatif. Harga aktual tergantung detail event, venue, dan negosiasi kontrak.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ONGOING EVENTS ========== -->
+  <section class="ongoing-section section-pad" id="ongoing">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Live Now</p>
+        <h2 class="section-title">Event Sedang Berlangsung</h2>
+      </div>
+      <div class="ongoing-grid" id="ongoingGrid"></div>
+      <div class="ongoing-empty" id="ongoingEmpty" style="display:none">
+        <span>📭</span>
+        <p>Tidak ada event yang sedang berlangsung saat ini.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INVITATION RATING MODAL ========== -->
+  <div class="modal-overlay" id="ratingModal">
+    <div class="modal-content modal-rating">
+      <button class="modal-close" id="ratingModalClose"><i class="fas fa-times"></i></button>
+      <h3>Beri Rating Event</h3>
+      <div class="rating-invite">
+        <label>Kode Undangan</label>
+        <input type="text" id="ratingCode" placeholder="Masukkan kode undangan">
+        <button class="btn btn-primary" id="verifyRatingCode">Verifikasi</button>
+        <div id="ratingError" class="step-error"></div>
+      </div>
+      <div class="rating-stars-area" id="ratingStarsArea" style="display:none;">
+        <p>Pilih rating untuk event:</p>
+        <div class="stars" id="starsContainer">
+          <i class="far fa-star" data-value="1"></i>
+          <i class="far fa-star" data-value="2"></i>
+          <i class="far fa-star" data-value="3"></i>
+          <i class="far fa-star" data-value="4"></i>
+          <i class="far fa-star" data-value="5"></i>
+        </div>
+        <p class="rating-value" id="ratingValue">0 / 5</p>
+        <button class="btn btn-primary" id="submitRating">Kirim Rating</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WA Button -->
+  <a href="https://wa.me/6287770600080" class="floating-wa" target="_blank" title="Hubungi via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ========== FOOTER / KONTAK ========== -->
+  <footer class="footer" id="kontak">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo" style="margin-bottom:1rem">
+<img src="Gambar lokasi/Logo/JEE LOGO OUTLINE HITAM.jpeg" alt="Jakarta Exclusive Event" class="logo-img">
+          </a>
+          <p>Event Organizer Exclusive Jakarta yang menghadirkan pengalaman dan kenangan tak terlupakan sejak 2009.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/jee.eo_?igsh=NjhjNDFkazUzaDdy" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com/@jee.eo_" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://youtube.com/@jee.eventorganizer?si=EeLcEGMv26weJgCe" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/6287770600080" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="#portofolio">Gathering</a></li>
+            <li><a href="#portofolio">Team Building</a></li>
+
+
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Perusahaan</h4>
+          <ul>
+            <li><a href="#beranda">Tentang Kami</a></li>
+            <li><a href="#ongoing">Event Aktif</a></li>
+            <li><a href="#portofolio">Portofolio</a></li>
+            <li><a href="#partners">Mitra</a></li>
+            <li><a href="#simulasi">Simulasi Budget</a></li>
+            <li><a href="#pesan">Pesan Event</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Kontak</h4>
+          <p>📞 0877-7060-0080</p>
+          <p>📧 jee.event.organizer@gmail.com</p>
+          <p>📍 Jakarta, Indonesia</p>
+          <a href="https://wa.me/6287770600080" target="_blank" class="btn-wa-sm">
+            <i class="fab fa-whatsapp"></i> Chat WhatsApp
+          </a>
+          <button id="openRatingModal" class="btn-wa-sm" style="background:var(--primary);margin-top:0.5rem;">
+            <i class="fas fa-star"></i> Beri Rating
+          </button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Jakarta Exclusive Event. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
